@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,300;10..48,400;10..48,500;10..48,600&display=swap");
+
+:root{
+    --primary: #cae4ff;
+    --secondry: #5f9ea0;
+    --base-primary: #fff;
+    --submitBtn: #46e9e0;
+    --copyButton: #8fbc8f;
+    --removeButton: #ffe4c4;
+    
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--primary);
+  display: flex;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  min-width: 60%;
+}
+
+#title {
+  font-size: 2.5rem;
+  text-align: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.manager {
+  color: var(--secondry);
+}
+
+.addTaskContainer {
+  width: 100%;
+  height: 30%;
+  border-radius: 8px;
+  background-color: var(--base-primary);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.6rem;
+  gap: 0.5rem;
+}
+
+.addTaskContainer #task-input-title {
+  width: 100%;
+  padding: 0.7rem;
+  outline-color: var(--submitBtn);
+}
+
+#task-input-title::placeholder {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.addTaskContainer #task-input-description {
+  width: 100%;
+  padding: 0.5rem;
+  height: 4rem;
+  outline-color: var(--submitBtn);
+  resize: none;
+}
+
+#task-input-description::placeholder {
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.addTaskContainer #sumbit-btn {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--submitBtn);
+  border: none;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+}
+
+.tasks-container {
+  width: 100%;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.task {
+  width: 100%;
+  height: 10rem;
+  background-color: var(--base-primary);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.text-content {
+  gap: 0.4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+#task-title {
+  font-size: 1.1rem;
+}
+
+#task-description {
+  font-size: 0.9rem;
+}
+
+.user-actions {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#task-status {
+  padding: 0.2rem 0rem;
+  border: none;
+  font-weight: 600;
+  outline: none;
+  background-color: var(--base-primary);
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+#copy-task-btn {
+  padding: 0.3rem 1.8rem;
+  background-color: var(--copyButton);
+  border-radius: none;
+  border: none;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+}
+
+#remove-task-btn {
+  background-color: var(--removeButton);
+  padding: 0.34rem 1rem;
+  border: none;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 455px) {
+  .content-container {
+    width: 100%;
+  }
+}
+@media (max-width: 320px) {
+  #remove-task-btn {
+    padding: 0.3rem 0.4rem;
+  }
+  #copy-task-btn {
+    padding: 0.3rem 0.4rem;
+  }
+}
